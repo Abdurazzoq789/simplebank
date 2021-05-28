@@ -5,6 +5,7 @@ import (
 	"strings"
 	"time"
 )
+
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 func init() {

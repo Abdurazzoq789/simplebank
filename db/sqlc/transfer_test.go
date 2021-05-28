@@ -11,8 +11,8 @@ import (
 func createRandomTransfer(t *testing.T, fromAccount Account, toAccount Account) Transfer {
 	arg := CreateTransferParams{
 		FromAccountID: fromAccount.ID,
-		ToAccountID: toAccount.ID,
-		Amount: util.RandomMoney(),
+		ToAccountID:   toAccount.ID,
+		Amount:        util.RandomMoney(),
 	}
 
 	transfer, err := testQueries.CreateTransfer(context.Background(), arg)
@@ -35,7 +35,7 @@ func TestCreateTransfer(t *testing.T) {
 	createRandomTransfer(t, fromAccount, toAccount)
 }
 
-func TestGetTransfer(t *testing.T)  {
+func TestGetTransfer(t *testing.T) {
 	fromAccount := createRandomAccount(t)
 	toAccount := createRandomAccount(t)
 	transfer1 := createRandomTransfer(t, fromAccount, toAccount)
