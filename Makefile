@@ -15,10 +15,13 @@ migratedown:
 dropdb:
 	docker exec -it postgres12 dropdb simple_bank
 
+vendor:
+	go env -w GO111MODULE=on
+
 sqlc:
 	sqlc generate
 
 test:
 	go test -v -cover ./...
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc test
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test vendor
