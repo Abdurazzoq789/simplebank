@@ -1,6 +1,6 @@
 module github.com/Abdurazzoq789/simplebank
 
-go 1.15
+go 1.16
 
 require (
 	github.com/aead/chacha20poly1305 v0.0.0-20170617001512-233f39982aeb
@@ -15,6 +15,7 @@ require (
 	github.com/lib/pq v1.10.2
 	github.com/mattn/go-isatty v0.0.13 // indirect
 	github.com/o1egl/paseto v1.0.0
+	github.com/pkg/errors v0.8.1
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.7.0
 	github.com/ugorji/go v1.2.6 // indirect
